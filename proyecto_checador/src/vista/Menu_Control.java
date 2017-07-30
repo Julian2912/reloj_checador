@@ -426,8 +426,8 @@ public class Menu_Control extends JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Consulta", jPanel1);
@@ -547,6 +547,11 @@ public class Menu_Control extends JFrame {
                 txtnameRegActionPerformed(evt);
             }
         });
+        txtnameReg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnameRegKeyTyped(evt);
+            }
+        });
         jPanel7.add(txtnameReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
 
         txtDirReg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -571,8 +576,25 @@ public class Menu_Control extends JFrame {
                 txtApePRegActionPerformed(evt);
             }
         });
+        txtApePReg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApePRegKeyTyped(evt);
+            }
+        });
         jPanel7.add(txtApePReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 200, -1));
+
+        txtTelReg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelRegKeyTyped(evt);
+            }
+        });
         jPanel7.add(txtTelReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 200, -1));
+
+        txtTelEmerReg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelEmerRegKeyTyped(evt);
+            }
+        });
         jPanel7.add(txtTelEmerReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 200, -1));
 
         txtApeMReg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -583,6 +605,11 @@ public class Menu_Control extends JFrame {
         txtApeMReg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApeMRegActionPerformed(evt);
+            }
+        });
+        txtApeMReg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApeMRegKeyTyped(evt);
             }
         });
         jPanel7.add(txtApeMReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 200, -1));
@@ -732,15 +759,30 @@ public class Menu_Control extends JFrame {
         jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, 151, 30));
 
         etiTelEmerBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        etiTelEmerBaja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                etiTelEmerBajaKeyTyped(evt);
+            }
+        });
         jPanel5.add(etiTelEmerBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 200, 20));
 
         jLabel28.setText("Apellido Materno");
         jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 151, -1));
 
         etiApeMBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        etiApeMBaja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                etiApeMBajaKeyTyped(evt);
+            }
+        });
         jPanel5.add(etiApeMBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 200, 20));
 
         etiApePBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        etiApePBaja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                etiApePBajaKeyTyped(evt);
+            }
+        });
         jPanel5.add(etiApePBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 200, 20));
 
         jLabel27.setText("Apellido Paterno");
@@ -750,6 +792,11 @@ public class Menu_Control extends JFrame {
         jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 151, 30));
 
         etiTelBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        etiTelBaja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                etiTelBajaKeyTyped(evt);
+            }
+        });
         jPanel5.add(etiTelBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 200, 20));
 
         etiDirBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -759,6 +806,11 @@ public class Menu_Control extends JFrame {
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 151, 30));
 
         etinameBaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        etinameBaja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                etinameBajaKeyTyped(evt);
+            }
+        });
         jPanel5.add(etinameBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, 20));
 
         jLabel26.setText("Nombre");
@@ -936,6 +988,12 @@ public class Menu_Control extends JFrame {
 
         jLabel58.setText("Nombre");
         jPanel6.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 151, -1));
+
+        txtnameAct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnameActKeyTyped(evt);
+            }
+        });
         jPanel6.add(txtnameAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
 
         txtDirAct.addActionListener(new java.awt.event.ActionListener() {
@@ -944,9 +1002,33 @@ public class Menu_Control extends JFrame {
             }
         });
         jPanel6.add(txtDirAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 200, -1));
+
+        txtApePAct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApePActKeyTyped(evt);
+            }
+        });
         jPanel6.add(txtApePAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 200, -1));
+
+        txtTelAct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelActKeyTyped(evt);
+            }
+        });
         jPanel6.add(txtTelAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 200, -1));
+
+        txtTelEmerAct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelEmerActKeyTyped(evt);
+            }
+        });
         jPanel6.add(txtTelEmerAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 200, -1));
+
+        txtApeMAct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApeMActKeyTyped(evt);
+            }
+        });
         jPanel6.add(txtApeMAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 200, -1));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -1351,6 +1433,7 @@ public class Menu_Control extends JFrame {
             int mayor = edao.dameCodigoMayor() + 1;
             int idD = jComboBox3.getSelectedIndex() + 100;
             String sexo = jRadioButton3.isSelected() ? "Masculino" : "Femenino";
+            
             EmpleadoVO e = new EmpleadoVO(mayor + "", idD + "", txtnameReg.getText(), txtApePReg.getText(), txtApeMReg.getText(), sexo, txtDirReg.getText(), txtTelReg.getText(), txtTelEmerReg.getText(), "activo");
             edao.registrarEmpleado(e);
 
@@ -1584,8 +1667,6 @@ public class Menu_Control extends JFrame {
         hdao.eliminarHorario(em + "");
         jTable4.setModel(new DefaultTableModel());
         CargaVistaActualizar();
-
-
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jComboBox6ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox6ItemStateChanged
@@ -1605,17 +1686,72 @@ public class Menu_Control extends JFrame {
         } else {
             jRadioButton8.setSelected(true);
         }
-
         HorarioDAO hdao = new HorarioDAO();
         HorarioVO h = hdao.ConsultaHorarioXCodigo(op + "");
         String[] titulo = "Dia,Hora de entrada,Hora de salida".split(",");
-
         ActualizarTabla(jTable4, h.formato_dia_Hentrada_Hsalida(), titulo);
-
         jComboBox7.setSelectedIndex(Integer.parseInt(e.getId_Departamento()) - 100);
-
-
     }//GEN-LAST:event_jComboBox6ItemStateChanged
+
+    private void txtnameRegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnameRegKeyTyped
+         restriccionLetra(evt);
+    }//GEN-LAST:event_txtnameRegKeyTyped
+
+    private void txtApePRegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApePRegKeyTyped
+        restriccionLetra(evt);
+    }//GEN-LAST:event_txtApePRegKeyTyped
+
+    private void txtApeMRegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApeMRegKeyTyped
+        restriccionLetra(evt);
+    }//GEN-LAST:event_txtApeMRegKeyTyped
+
+    private void txtTelRegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelRegKeyTyped
+        restriccionNum(evt);
+    }//GEN-LAST:event_txtTelRegKeyTyped
+
+    private void txtTelEmerRegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelEmerRegKeyTyped
+        restriccionNum(evt);
+    }//GEN-LAST:event_txtTelEmerRegKeyTyped
+
+    private void etinameBajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_etinameBajaKeyTyped
+        restriccionLetra(evt);
+    }//GEN-LAST:event_etinameBajaKeyTyped
+
+    private void etiApePBajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_etiApePBajaKeyTyped
+        restriccionLetra(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_etiApePBajaKeyTyped
+
+    private void etiApeMBajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_etiApeMBajaKeyTyped
+        restriccionLetra(evt);// TODO add your handling code here:
+    }//GEN-LAST:event_etiApeMBajaKeyTyped
+
+    private void etiTelBajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_etiTelBajaKeyTyped
+        restriccionNum(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_etiTelBajaKeyTyped
+
+    private void etiTelEmerBajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_etiTelEmerBajaKeyTyped
+        restriccionNum(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_etiTelEmerBajaKeyTyped
+
+    private void txtnameActKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnameActKeyTyped
+        restriccionLetra(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnameActKeyTyped
+
+    private void txtApePActKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApePActKeyTyped
+        restriccionLetra(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApePActKeyTyped
+
+    private void txtApeMActKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApeMActKeyTyped
+        restriccionLetra(evt);// TODO add your handling code here:
+    }//GEN-LAST:event_txtApeMActKeyTyped
+
+    private void txtTelActKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelActKeyTyped
+        restriccionNum(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelActKeyTyped
+
+    private void txtTelEmerActKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelEmerActKeyTyped
+        restriccionNum(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelEmerActKeyTyped
     //----------------------------Encabezado---------------------------------------------------------------------------------
 
     private void CargaVistaActualizar() {
@@ -1745,6 +1881,23 @@ public class Menu_Control extends JFrame {
         }
        
         
+    }
+    public void restriccionLetra(java.awt.event.KeyEvent evt){
+        char c=evt.getKeyChar(); 
+          if(Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+              JOptionPane.showMessageDialog(null, "Ingresa Solo Letras");
+          } 
+    }
+    
+    public void restriccionNum(java.awt.event.KeyEvent evt){
+    char c=evt.getKeyChar(); 
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+              JOptionPane.showMessageDialog(null, "Ingresa Solo Numeros");
+          } 
     }
 
     public static void main(String args[]) {

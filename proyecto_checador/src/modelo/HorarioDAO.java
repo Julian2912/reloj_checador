@@ -57,7 +57,7 @@ public class HorarioDAO {
       }
   
    
-   JOptionPane.showMessageDialog(null, "Se ha actualizado  Exitosamente","Información",JOptionPane.INFORMATION_MESSAGE);
+   //JOptionPane.showMessageDialog(null, "Se ha actualizado  Exitosamente","Información",JOptionPane.INFORMATION_MESSAGE);
    estatuto.close();
    conex.desconectar();
     
